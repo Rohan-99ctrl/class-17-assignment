@@ -1,0 +1,480 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --shadow-1 : 0 .125rem .25rem rgba(0, 0, 0, 0.075);
+    --shadow-2 : 0 .5rem .1rem rgba(0, 0, 0, 0.15);
+    --shadow-3 : 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+div.mainSection{
+    height: 100vh;
+    background-color: #242526;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.btnWrapper{
+    width: 1100px;
+    margin: auto;
+}
+
+div.btnWrapper a.linking{
+    padding: 25px;
+    font-size: 25px;
+    font-weight: 900;
+    background-color: rgb(255 255 255 / 10%);
+    box-shadow: 1px 0rem 11px 4px rgb(0 0 0);
+    text-decoration: none;
+    color: white;
+    display: block;
+    border-radius: 15px;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-left: 5px solid rgb(139, 139, 139);
+    border-right: 5px solid rgb(139, 139, 139);
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s;
+}
+
+div.btnWrapper a.linking:last-child{
+    margin-bottom: 0px;
+}
+
+div.btnWrapper a.linking:hover{
+    background-color: rgba(255, 255, 255, 0.164);
+    transform: translateY(-20px);
+    color: rgba(255, 255, 255, 0.459);
+}
+
+/* tabs design */
+
+
+div.mainTabSec{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(38 38 38);
+    color: white;
+}
+
+div.rohan_tab{
+    width: 600px;
+    margin: auto;
+    box-shadow: 0px 0px 20px 4px black;
+    padding: 25px;
+    background-color: transparent;
+    border-radius: 10px;
+    border-left: 7px solid red;
+    border-right: 7px solid red;
+}
+
+div.tab_menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    padding-bottom: 20px;
+}
+
+div.tab_menu ul li{
+    display: block;
+    width: 20%;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+}
+
+div.tab_menu ul li a{
+    display: block;
+    text-decoration: none;
+    font-weight: 900;
+    color: white;
+    border-bottom: 2px solid rgb(77, 77, 77);
+}
+
+div.tab_menu ul li a:active{
+    color: rgb(0, 255, 0);
+}
+
+div.tab_menu ul li a.active{
+    border-bottom: none;
+    border-left: 2px solid rgb(77, 77, 77);
+    border-right: 2px solid rgb(77, 77, 77);
+    border-top: 2px solid rgb(77, 77, 77);
+    border-radius: 5px 5px 0px 0px;
+}
+
+div.tab_pane{
+    display: none;
+}
+
+div.tab_pane.active{
+    display: block;
+}
+
+div.tab_pane h1{
+    margin-bottom: 15px;
+}
+
+div.tab_pane p{
+    line-height: 25px;
+    font-weight: 600;
+}
+
+
+/* wordpress clone design */
+
+header{
+    overflow: hidden;
+}
+
+div.headerWrapper{
+    background-color: #1D2327;
+    overflow: hidden;
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 100;
+}
+
+div.leftSec{
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+div.rightSec{
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+div.leftSec a.menuLink{
+    display: inline-block;
+    color: rgb(212, 212, 212);
+    font-size: 13px;
+    text-decoration: none;
+    padding: 8px 10px;
+}
+
+div.leftSec a.menuLink:hover{
+    background: #2C3338;
+    color: #72AEE6 !important;
+}
+
+div.leftSec a.menuLink:hover i{
+    color: #72AEE6 !important;
+}
+
+div.leftSec a.menuLink:first-child{
+    padding: 3px 3px;
+}
+
+div.leftSec a.menuLink:first-child i{
+    font-size: 22px;
+    padding: 2px 2px;
+}
+
+div.leftSec a.menuLink i{
+    color: rgb(151, 151, 151);
+    font-size: 15px;
+    padding-right: 7px;
+}
+
+div.rightSec a.rightMenuLink{
+    padding: 8px 10px;
+    display: inline-block;
+    font-size: 13px;
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+}
+
+div.rightSec a.rightMenuLink:hover{
+    background: #2C3338;
+    color: #72AEE6 !important;
+}
+
+
+div#mainSection{
+    padding-top: 36px;
+    overflow: hidden;
+}
+
+div.leftOption{
+    width: 161px;
+    height: 100%;
+    background: #1D2327;
+    float: left;
+}
+
+div.leftOption ul.listLink{
+    padding: 0px;
+    margin: 0px;
+}
+
+div.leftOption ul.listLink li{
+    display: flex;
+    align-items: center;
+    display: block;
+}
+
+div.leftOption ul.listLink li a{
+    text-decoration: none;
+    color: #eaeaea;
+    font-size: 14px;
+    padding: 7px 15px;
+    display: block;
+}
+
+div.leftOption ul.listLink li a:hover{
+    border-left: 4px solid #72AEE6;
+    color: #72AEE6;
+}
+
+div.leftOption ul.listLink li a.active{
+    background-color: #3393ec;
+    color: white;
+}
+
+div.leftOption ul.listLink li a i{
+    color: gray ;
+    font-size: 17px;
+    padding-right: 7px;
+}
+
+div.leftOption ul.listLink li a:hover i{
+    color: #72AEE6;
+}
+
+div.leftOption ul.listLink li a i.active{
+    color: white !important;
+}
+
+div.RightOption{
+    float: right;
+    width: 88%;
+}
+
+div.RightOption div.tabPane{
+    height: 95vh;
+    background-color: #eaeaea;
+}
+
+div.RightOption div.tabPane h4{
+    padding: 17px 20px;
+    color: #474747;
+    font-weight: normal;
+}
+
+div.tabPane{
+    display: none;
+}
+
+div.tabPane.active{
+    display: block;
+}
+
+
+
+/* result app design */
+
+div.mainResultWrapper{
+    padding: 65px 0px;
+    background-color: #2a2a2a;
+}
+
+div.inputWrapper{
+    width: 90%;
+    padding: 23px;
+    margin: auto;
+    color: white;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px 3px black;
+    border-radius: 7px;
+    border-left: 5px solid orangered;
+    border-right: 5px solid orangered;
+}
+
+div.tableWrapper{
+    padding: 25px;
+    box-shadow: 0px 0px 20px 3px black;
+    border-left: 5px solid orangered;
+    border-right: 5px solid orangered;
+    border-radius: 7px;
+    color: white;
+}
+
+div.tableWrapper table{
+    width: 100% !important;
+}
+
+div.tableWrapper table thead tr{
+    background-color: rgb(26, 26, 26);
+}
+
+div.tableWrapper table tr:nth-child(even) {
+    background-color: rgb(26, 26, 26);
+}
+
+div.tableWrapper table th:first-child{
+    padding: 10px 13px;
+}
+
+div.tableWrapper table td:first-child{
+    padding: 10px 13px;
+}
+
+div.tableWrapper table, th, td {
+    border: 2px solid rgb(133, 133, 133);
+    border-collapse: collapse;
+    padding: 10px 0px;
+    text-align: center;
+    align-items: center;
+}
+
+div.tableWrapper table td img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+div.alertModal{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff57;
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+div.alertModal.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+div.alertModalContent{
+    width: 500px;
+    padding: 30px 20px;
+    border-radius: 7px;
+    background-color: white;
+    border-left: 6px solid orangered;
+    border-right: 6px solid orangered;
+    transform: translateY(-120px);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+div.alertModalContent.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+div.alertModalContent div.alertModalHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+div.alertModalContent div.alertModalHeader a{
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 6px 0px;
+    background: #dadada;
+    display: block;
+    border-radius: 50%;
+}
+div.alertModalContent div.alertModalHeader a i{
+    color: #000000;
+    font-size: 17px;
+}
+
+
+div.studentIdModal{
+    padding: 30px 0px;
+    background-color: #ffffff7e;
+    height: 900px;
+    position: absolute;
+    top: 0;left: 0;right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.modalContent{
+    width: 750px;
+    padding: 35px 20px;
+    background-color: white;
+    border-radius: 11px;
+    border-left: 7px solid orangered;
+    border-right: 7px solid orangered;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+div.modalContent div.modalHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+div.modalContent div.modalHeader a{
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 6px 0px;
+    background: #dadada;
+    display: block;
+    border-radius: 50%;
+}
+
+div.modalContent div.modalHeader a i{
+    font-size: 17px;
+    color: #000000;
+}
+
+div.modalContent div.modalBody{
+    text-align: center;
+}
+
+div.modalContent div.modalBody img{
+    width: 150px;
+    height: 180px;
+    padding: 8px;
+    object-fit: cover;
+    background: #535353;
+    box-shadow: 0px 0px 10px 1px gray;
+}
+
+div.modalContent div.modalBody table{
+    box-shadow: 0px 0px 10px 1px gray;
+    align-items: center;
+}
+
+div.modalContent div.modalBody table tbody tr td{
+    text-align: center;
+    align-items: center;
+}
