@@ -411,70 +411,79 @@ div.alertModalContent div.alertModalHeader a i{
 }
 
 
-div.studentIdModal{
-    padding: 30px 0px;
+/* div.modal{
+    padding: 60px 0px;
     background-color: #ffffff7e;
-    height: 900px;
     position: absolute;
     top: 0;left: 0;right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+} */
+
+div.studentIdModal.active{
+    opacity: 1;
+    pointer-events: auto;
 }
 
-div.modalContent{
-    width: 750px;
+div.modal-dialog{
     padding: 35px 20px;
     background-color: white;
     border-radius: 11px;
     border-left: 7px solid orangered;
     border-right: 7px solid orangered;
-    transform: scale(1);
-    opacity: 1;
     transition: all 0.4s ease-in-out;
 }
 
-div.modalContent div.modalHeader{
+div.modal-header{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-div.modalContent div.modalHeader a{
+div.modal-header a{
     text-decoration: none;
     width: 35px;
     height: 35px;
     text-align: center;
-    padding: 6px 0px;
     background: #dadada;
     display: block;
     border-radius: 50%;
 }
 
-div.modalContent div.modalHeader a i{
-    font-size: 17px;
+div.modal-header a i{
+    padding: 7px 0px;
+    font-size: 20px;
     color: #000000;
 }
 
-div.modalContent div.modalBody{
+div.modal-body table{
     text-align: center;
 }
 
-div.modalContent div.modalBody img{
-    width: 150px;
-    height: 180px;
+div.modal-body div.detail{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.modal-body div.detail img{
+    width: 170px;
+    height: 200px;
     padding: 8px;
     object-fit: cover;
     background: #535353;
     box-shadow: 0px 0px 10px 1px gray;
 }
 
-div.modalContent div.modalBody table{
+div.modal-body table{
     box-shadow: 0px 0px 10px 1px gray;
     align-items: center;
 }
 
-div.modalContent div.modalBody table tbody tr td{
+div.modal-body table tbody tr td{
     text-align: center;
     align-items: center;
 }

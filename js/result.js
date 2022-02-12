@@ -102,7 +102,7 @@ function allStudentData(){
                 <td>${uploadItems.sGenderVal}</td>
                 <td><img src="${uploadItems.photoVal}" alt="Profile"></td>
                 <td>
-                    <button class="btn btn-info"><i class="fas fa-solid fa-eye text-white"></i></button> 
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#myModal" onclick="getsingleData(${index})" class="btn btn-info modalShow"><i class="fas fa-solid fa-eye text-white"></i></button> 
                     <button onclick="deleteStudent(${index})" style="margin-left: 5px;" class="btn btn-danger"><i class="fas fa-trash"></i></button></td>
             </tr>
 
@@ -110,6 +110,107 @@ function allStudentData(){
     })
 
     uploadItem.innerHTML = addingVal;
+
+}
+
+function deleteStudent(index){
+    
+    let deleteStudentData = dataGet('resultApps');
+    deleteStudentData.splice(index, 1);
+    dataSend('resultApps', deleteStudentData);
+    allStudentData();
+
+}
+
+
+const studentResultData = document.querySelector('.studentResultData');
+
+function getsingleData(index){
+
+    let dataGetFromLs = dataGet('resultApps');
+    let leader = new MainFunc();
+
+    studentResultData.innerHTML = `
+    
+    
+        <div class="detail">
+            <div>
+                <img src="${dataGetFromLs[index].photoVal}" alt="">
+            </div>
+
+            
+            <div class="p-4">
+                <h5 class="text-start mb-2">Name : ${dataGetFromLs[index].sNamVal}</h5>
+                <h5 class="text-start mb-2">Roll : ${dataGetFromLs[index].sRollVal}</h5>
+                <h5 class="text-start mb-2">Class : ${dataGetFromLs[index].sClassVal}</h5>
+                <h5 class="text-start mb-2">Registration No. : ${dataGetFromLs[index].sRegVal}</h5>
+                <h5 class="text-start">Gender : ${dataGetFromLs[index].sGenderVal}</h5>
+            </div>
+        </div>
+
+        <hr>
+
+        <table class="table table-striped table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>Subjects</th>
+                    <th>Marks</th>
+                    <th>GPA</th>
+                    <th>Grade</th>
+                    <th>CGPA</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Bangla</td>
+                    <td>${dataGetFromLs[index].banglaVal}</td>
+                    <td>${leader.gpa(dataGetFromLs[index].banglaVal)}</td>
+                    <td>${leader.grade(dataGetFromLs[index].banglaVal)}</td>
+                    <td class="cgpa" rowspan="6">${leader.cgpa(leader.gpa(dataGetFromLs[index].banglaVal), leader.gpa(dataGetFromLs[index].englishVal), leader.gpa(dataGetFromLs[index].mathVal), leader.gpa(dataGetFromLs[index].scienceVal), leader.gpa(dataGetFromLs[index].societyVal), leader.gpa(dataGetFromLs[index].religionVal))}</td>
+                    <td class="grade" rowspan="6">A</td>
+                </tr>
+
+                <tr>
+                    <td>English</td>
+                    <td>${dataGetFromLs[index].englishVal}</td>
+                    <td>${leader.gpa(dataGetFromLs[index].englishVal)}</td>
+                    <td>${leader.grade(dataGetFromLs[index].englishVal)}</td>
+                </tr>
+
+                <tr>
+                    <td>Math</td>
+                    <td>${dataGetFromLs[index].mathVal}</td>
+                    <td>${leader.gpa(dataGetFromLs[index].mathVal)}</td>
+                    <td>${leader.grade(dataGetFromLs[index].mathVal)}</td>
+                </tr>
+
+                <tr>
+                    <td>Science</td>
+                    <td>${dataGetFromLs[index].scienceVal}</td>
+                    <td>${leader.gpa(dataGetFromLs[index].scienceVal)}</td>
+                    <td>${leader.grade(dataGetFromLs[index].scienceVal)}</td>
+                </tr>
+
+                <tr>
+                    <td>Society</td>
+                    <td>${dataGetFromLs[index].societyVal}</td>
+                    <td>${leader.gpa(dataGetFromLs[index].societyVal)}</td>
+                    <td>${leader.grade(dataGetFromLs[index].societyVal)}</td>
+                </tr>
+
+                <tr>
+                    <td>Religion</td>
+                    <td>${dataGetFromLs[index].religionVal}</td>
+                    <td>${leader.gpa(dataGetFromLs[index].religionVal)}</td>
+                    <td>${leader.grade(dataGetFromLs[index].religionVal)}</td>
+                </tr>
+            </tbody>
+        </table>
+    
+    
+    `;
 
 }
 
