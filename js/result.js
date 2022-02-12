@@ -168,8 +168,8 @@ function getsingleData(index){
                     <td>${dataGetFromLs[index].banglaVal}</td>
                     <td>${leader.gpa(dataGetFromLs[index].banglaVal)}</td>
                     <td>${leader.grade(dataGetFromLs[index].banglaVal)}</td>
-                    <td class="cgpa" rowspan="6">${leader.cgpa(leader.gpa(dataGetFromLs[index].banglaVal), leader.gpa(dataGetFromLs[index].englishVal), leader.gpa(dataGetFromLs[index].mathVal), leader.gpa(dataGetFromLs[index].scienceVal), leader.gpa(dataGetFromLs[index].societyVal), leader.gpa(dataGetFromLs[index].religionVal))}</td>
-                    <td class="grade" rowspan="6">A</td>
+                    <td class="cgpa" rowspan="6">${leader.cgpa(leader.gpa(dataGetFromLs[index].banglaVal), leader.gpa(dataGetFromLs[index].englishVal), leader.gpa(dataGetFromLs[index].mathVal), leader.gpa(dataGetFromLs[index].scienceVal), leader.gpa(dataGetFromLs[index].societyVal), leader.gpa(dataGetFromLs[index].religionVal)).cgpaRes}</td>
+                    <td class="grade" rowspan="6">${leader.cgpa(leader.gpa(dataGetFromLs[index].banglaVal), leader.gpa(dataGetFromLs[index].englishVal), leader.gpa(dataGetFromLs[index].mathVal), leader.gpa(dataGetFromLs[index].scienceVal), leader.gpa(dataGetFromLs[index].societyVal), leader.gpa(dataGetFromLs[index].religionVal)).gradeRes}</td>
                 </tr>
 
                 <tr>

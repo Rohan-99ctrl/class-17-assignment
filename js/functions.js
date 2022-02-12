@@ -122,22 +122,23 @@ function MainFunc(){
 
         if(bn == 0 || en == 0 || math == 0 || science == 0 || society == 0 || rel == 0){
 
-            return `
-                <span class="alert alert-danger mt-3"">0.00</span>
-            `;
+            return {
+                cgpaRes     : 'Failed',
+                gradeRes    : 'F'
+            };
 
         }else{
 
-            return `
-                ${cgpa.toFixed(2)}
-            `;
+            return {
+                cgpaRes     : `${cgpa.toFixed(2)}`,
+                gradeRes    : `${this.totalGrade(cgpa.toFixed(2))}`
+            };
 
         }
 
     }
 
 
-    // <span class="alert alert-success mt-3"">${this.totalGrade(cgpa.toFixed(2))}</span>
 
 }
 
